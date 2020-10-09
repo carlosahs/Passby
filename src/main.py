@@ -3,7 +3,7 @@ import random
 from typing import List
 
 # constants
-DIGITS = [i for i in range(10)]
+DIGITS = [str(i) for i in range(10)]
 LOWER_CASES = [
     'a', 'b', 'c', 'd', 'e',
     'f', 'g', 'h', 'i', 'j',
@@ -69,7 +69,7 @@ def compute_password(n:int) -> str:
     for _ in range(n):
         char_type = random.choice(char_keys)
 
-        password += str(random.choice(CHAR_TYPES[char_type]))
+        password += random.choice(CHAR_TYPES[char_type])
 
         chars[char_type] -= 1
         if chars[char_type] == 0:
@@ -78,5 +78,5 @@ def compute_password(n:int) -> str:
 
     return password
 
-password = compute_password(8)
+password = compute_password(10)
 print(password)
