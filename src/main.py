@@ -78,5 +78,7 @@ def compute_password(n:int) -> str:
 
     return password
 
-password = compute_password(10)
-print(password)
+
+if __name__ == '__main__':
+    password = compute_password(12)
+    print(password)
