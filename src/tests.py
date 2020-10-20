@@ -17,6 +17,20 @@ class TestSearchCharType(unittest.TestCase):
                          "Should be 'digits'")     
         self.assertEqual("lowercases", search_char_type("x"), 
                          "Should be 'digits'") 
+    def test_search_uppercases(self):
+        self.assertEqual("uppercases", search_char_type("B"), 
+                         "Should be 'digits'")
+        self.assertEqual("uppercases", search_char_type("P"), 
+                         "Should be 'digits'")     
+        self.assertEqual("uppercases", search_char_type("Z"), 
+                         "Should be 'digits'") 
+    def test_search_symbols(self):
+        self.assertEqual("symbols", search_char_type("@"), 
+                         "Should be 'digits'")
+        self.assertEqual("symbols", search_char_type(";"), 
+                         "Should be 'digits'")     
+        self.assertEqual("symbols", search_char_type("_"), 
+                         "Should be 'digits'") 
 
 if __name__ == "__main__":
     unittest.main()     
